@@ -23,7 +23,8 @@ function routeConfig ($stateProvider) { // StateProvider as a Provider Object (i
     })
     .state('page1',{
       url:'/page1',
-      templateUrl: 'src/index/one/indexone.html'
+      templateUrl: 'src/index/one/indexone.html',
+      controller: 'calenderController' 
     })  
 
     .state('page1.one',{
@@ -43,10 +44,20 @@ function routeConfig ($stateProvider) { // StateProvider as a Provider Object (i
       url:'/one/workflow',
       templateUrl:'src/index/one/workflow/workflow.html' 
     })
+
     .state('page1.one.calender',{
       url:'/one/calender',
-      templateUrl:'src/index/one/calender/calender.html' 
+      templateUrl:'src/index/one/calender/calender.html',
+      controller: 'calenderController',
+      resolve: {                                                     // resolve holds sharable data for controllers
+        data: ['AshishService', function (AshishService) {
+          console.log( AshishService.getUser())
+          return AshishService.getUser();
+        }]
+      }
+      
     })
+    
     .state('page1.one.users',{
       url:'/one/users',
       templateUrl:'src/index/one/users/users.html' 

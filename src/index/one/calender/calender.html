@@ -1,3 +1,20 @@
-<div class="col-md-9">
-    <h1>its index one calender</h1>
+<div ng-controller="calenderController as vm">
+    <h1>its index one calender {{vm.name}} </h1>
+    <p>
+        write  {{age}}      
+    </p>
+    name:<input color="red" ng-model="vm.data">{{vm.data}}
+
+    <form novalidate>
+        First Name:<br>
+        <input style="color: #000000;" type="text" ng-model="user.firstName"><br>
+        Last Name:<br>
+        <input style="color: #000000;" type="text" ng-model="user.lastName">
+        <br><br>
+        <button ng-click="reset()">RESET</button>
+    </form>
+
+    <p>form = {{user}}</p>
+    <p>master = {{master}}</p>
+
 </div>
