@@ -13,14 +13,26 @@ angular.module('public') // retrive existing `public` module
 function routeConfig ($stateProvider) { // StateProvider as a Provider Object (injectable during config time).
   // Routes
   $stateProvider
-  .state('index', {
-    url:'/indexhome',
-    templateUrl: 'src/index/indexhome.html'                     // <ui-view> `home.html` </ui-view> 
-  })  
     .state('public', {
       absract: true,
       templateUrl: 'src/public/public.html'                     // <ui-view> `home.html` </ui-view> 
     })
+    .state('index', {
+      url:'/indexhome',
+      templateUrl: 'src/index/indexhome.html'                     // <ui-view> `home.html` </ui-view> 
+    })
+    .state('page1',{
+      url:'/page1',
+      templateUrl: 'src/index/one/indexone.html'
+    })  
+    .state('page2',{
+      url:'/page2',
+      templateUrl: 'src/index/two/indextwo.html'
+    }) 
+    .state('page3',{
+      url:'/page3',
+      templateUrl: 'src/index/three/indexthree.html'
+    }) 
     .state('public.home', {
       url: '/',
       templateUrl: 'src/public/home/home.html'                  // menu special map

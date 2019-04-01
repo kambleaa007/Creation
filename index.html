@@ -24,15 +24,16 @@
             <div>
                 <div id="avatarzoom">
                     <img src="images/self/self.jpg" alt="Avatar" class="avatarzoom" >                            
-                <a class="navbar-brand;" href="#/indexhome" style=" margin: 5px;">Click Here to Index Home</a>
+                <a class="navbar-brand;" ui-sref="index" style=" margin: 5px;">Click Here to Index Home</a><!-- href="#/indexhome" -->
               </div>
             </div>
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <!-- ui-sref always going to be name of state to activate   -->
+            <li><a ui-sref="page1">Page 1</a></li> 
+            <li><a ui-sref="page2">Page 2</a></li>
+            <li><a ui-sref="page3">Page 3</a></li>
           </ul>
         </div>
       </nav>
@@ -48,7 +49,7 @@
       <div class="container">
         <div class="text-center">
           &copy; Copyright Ashish Application MAR 2019 |
-          <a ui-sref="admin.auth">Admin</a></div>
+          <a href="https://kambleaa007.github.io">Admin</a></div>
       </div>
     </footer>
 
