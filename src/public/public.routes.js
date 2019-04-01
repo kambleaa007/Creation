@@ -25,6 +25,41 @@ function routeConfig ($stateProvider) { // StateProvider as a Provider Object (i
       url:'/page1',
       templateUrl: 'src/index/one/indexone.html'
     })  
+
+    .state('page1.one',{
+      absract: true,
+      templateUrl: 'src/index/one/one.html'
+    })
+
+    .state('page1.one.home',{
+      url:'/one/home',
+      templateUrl:'src/index/one/home/home.html' 
+    })
+    .state('page1.one.statistic',{
+      url:'/one/statistic',
+      templateUrl:'src/index/one/statistic/statistic.html' 
+    })
+    .state('page1.one.workflow',{
+      url:'/one/workflow',
+      templateUrl:'src/index/one/workflow/workflow.html' 
+    })
+    .state('page1.one.calender',{
+      url:'/one/calender',
+      templateUrl:'src/index/one/calender/calender.html' 
+    })
+    .state('page1.one.users',{
+      url:'/one/users',
+      templateUrl:'src/index/one/users/users.html' 
+    })
+    .state('page1.one.settings',{
+      url:'/one/settings',
+      templateUrl:'src/index/one/settings/settings.html' 
+    })
+
+
+
+
+
     .state('page2',{
       url:'/page2',
       templateUrl: 'src/index/two/indextwo.html'
