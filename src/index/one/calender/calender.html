@@ -1,20 +1,39 @@
-<div ng-controller="calenderController as vm">
-    <h1>its index one calender {{vm.name}} </h1>
-    <p>
-        write  {{age}}      
-    </p>
-    name:<input color="red" ng-model="vm.data">{{vm.data}}
-
-    <form novalidate>
-        First Name:<br>
-        <input style="color: #000000;" type="text" ng-model="user.firstName"><br>
-        Last Name:<br>
-        <input style="color: #000000;" type="text" ng-model="user.lastName">
-        <br><br>
-        <button ng-click="reset()">RESET</button>
-    </form>
-
-    <p>form = {{user}}</p>
-    <p>master = {{master}}</p>
-
+<div class="jumbotron text-white" style="background-color: #8c6278;">
+    <div ng-controller="calenderController as vm">
+        <h3 class="display-4">its index one calender {{vm.name}} </h3>
+        <hr class="my-4">
+        <p class="lead">
+            write  {{age}}      
+        </p>
+        <hr class="my-4">
+        name:<input style="color: #000000;" ng-model="vm.data">{{vm.data}}
+        <hr class="my-4">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <form novalidate>
+                    First Name:<br>
+                    <input style="color: #000000;" type="text" ng-model="user.firstName"><br>
+                    Last Name:<br>
+                    <input style="color: #000000;" type="text" ng-model="user.lastName">
+                    <br><br>
+                    <button ng-click="reset()">RESET</button>
+                    <button ng-click="save(user)">Save</button>
+                </form>
+            </div>
+            <div class="col-md-6" ng-show="saved">
+                <div >Saved Data Sucessfully</div>
+                <div>
+                    <p>angular.copy() is not used</p>
+                    <p>firstName = {{user.firstName}}</p>
+                    <p>lastName = {{user.lastName}}</p>
+                </div>
+                <div>
+                    <p>angular.copy() is used</p>
+                    <p>firstName = {{master.firstName}}</p>
+                    <p>lastName = {{master.lastName}}</p>
+                    <p>{{vm.user}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

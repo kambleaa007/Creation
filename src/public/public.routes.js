@@ -42,7 +42,8 @@ function routeConfig ($stateProvider) { // StateProvider as a Provider Object (i
     })
     .state('page1.one.workflow',{
       url:'/one/workflow',
-      templateUrl:'src/index/one/workflow/workflow.html' 
+      templateUrl:'src/index/one/workflow/workflow.html',
+      controller: 'workflowController'  
     })
 
     .state('page1.one.calender',{

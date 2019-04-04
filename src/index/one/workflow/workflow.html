@@ -1,3 +1,9 @@
-<div class="col-md-9">
-    <h1>its index one workflow</h1>
-</div> 
+<div>
+    <div class="col-md-9" ng-controller="workflowController as vm">
+        <h1>its index one workflow</h1>
+        <div>
+            <p>going into custom directive with data {{vm.wf1}}</p>            
+            <workflow-component wf1="vm.wf1"></workflow-component>
+        </div>
+    </div> 
+</div>

@@ -4,17 +4,23 @@
         <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
             <div class="navi">
                 <ul>
-                    <li><a ui-sref="page1.one.home"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                    <li><a ui-sref="page1.one.workflow"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                    <li><a ui-sref="page1.one.statistic"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
-                    <li><a ui-sref="page1.one.calender"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
-                    <li><a ui-sref="page1.one.users"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
-                    <li><a ui-sref="page1.one.settings"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                    <li ><a ui-sref="page1.one.home"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                    <li ><a ui-sref="page1.one.workflow"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
+                    <li ><a ui-sref="page1.one.statistic"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
+                    <li ><a ui-sref="page1.one.calender"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
+                    <li ><a ui-sref="page1.one.users"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                    <li ><a ui-sref="page1.one.settings"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
                 </ul>
             </div>
         </div>
         <div>
-            <ui-view>view</ui-view>
+            <ui-view>
+                <div class="jumbotron text-white" style="background-color: #8c6278;">
+                    <p class="lead">view on page one</p>
+                    <hr class="my-4">
+                        Utility class
+                </div>
+            </ui-view>
         </div>                
     </div>
 </div>
